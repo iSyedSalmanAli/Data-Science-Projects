@@ -1,0 +1,25 @@
+<head>
+    <title>model</title>
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div id="brandname">
+                Machine Learning App with Flask
+            </div>
+            <h2>Spam Detector</h2>
+        </div>
+    </header>
+
+    <p style = "color:blue;font-size:20;text-align:center"><b>Results for comments</b>
+    </p>
+    <div class="results">
+        {% if prediction == 1%}
+        <h2 style="color:red;">This is a spam email</h2>
+        {% elif prediction == 0%}
+        <h2 style="color:red;">This is a safe email</h2>
+        {%endif%}
+    </div>
+</body>
